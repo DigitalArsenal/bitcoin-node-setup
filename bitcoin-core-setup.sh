@@ -21,6 +21,8 @@ cp -R * /usr/local/
 
 curl https://raw.githubusercontent.com/bitcoin/bitcoin/master/contrib/init/bitcoind.service | sed 's/\/usr\//\/usr\/local\//' > /etc/systemd/system/bitcoind.service
 
+curl https://raw.githubusercontent.com/bitcoin/bitcoin/master/share/examples/bitcoin.conf > /etc/bitcoin/bitcoin.conf
+
 systemctl daemon-reload
 
 systemctl enable bitcoind
